@@ -1,1 +1,1 @@
-this is readme file for simple she
+this is readme file for simple sh

@@ -1,1 +1,1 @@
-this is readme file for simple 
+this is readme file for simpl 

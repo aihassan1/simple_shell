@@ -14,6 +14,10 @@ char *path_cpy;
 char *_cmd_path;
 char *dir_with_cmd;
 
+if (_cmd == NULL)
+{
+return (NULL);
+}
 path_cpy = strdup(current_path);
 dir_with_cmd = strtok(path_cpy, ":");
 

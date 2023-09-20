@@ -29,17 +29,14 @@ exit(0);
 tokens = _tokenize(line, " \n");
 
 check_for_exit(tokens);
-
 _execute(tokens, env);
-
-
+free(line);
 for (i = 0; tokens[i] != NULL; i++)
 {
 free(tokens[i]);
 }
 free(tokens);
 }
-
 free(line);
 return (0);
 }

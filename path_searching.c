@@ -19,6 +19,8 @@ if ((access(_cmd, X_OK)) == 0)
 {
 return (_strduplicate(_cmd)); }
 path_cpy = _strduplicate(current_path);
+if (path_cpy == NULL)
+{return NULL; }
 dir_with_cmd = strtok(path_cpy, ":");
 while (dir_with_cmd != NULL)
 {
@@ -27,15 +29,13 @@ if (_cmd_path == NULL)
 {
 free(path_cpy);
 free(_cmd_path);
-return (NULL);
-}
+return (NULL); }
 _cmd_path_two = str_concat(_cmd_path, _cmd);
 if (_cmd_path_two == NULL)
 {
 free(path_cpy);
 free(_cmd_path);
-return (NULL);
-}
+return (NULL); }
 if ((access(_cmd_path_two, X_OK)) == 0)
 {
 free(_cmd_path);

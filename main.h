@@ -1,7 +1,7 @@
 #ifndef ____MAIN_SHELL___H
 #define ____MAIN_SHELL___H
 
-#define BUFFER_SIZE 4024
+
 #include <dirent.h>
 #include <fcntl.h>
 #include <signal.h>
@@ -16,7 +16,7 @@
 int _prompt(void);
 char *_read_input(int issaty);
 char **_tokenize(char *line, char *delimiters);
-int _execute(char **args, char **env);
+void _execute(char **args, char **env);
 void check_for_exit(char *argv[]);
 int string_to_int (char *str);
 char *path_searching(char *_cmd);

@@ -13,9 +13,13 @@ void check_for_exit(char **argv)
 int compare;
 int exit_int;
 
-if (argv[0] != NULL)
+if (argv == NULL || argv[0] == NULL)
 {
-compare = _strcomp("exit", argv[0]);
+return;
+}
+
+compare = strcmp("exit", argv[0]);
+
 if (compare == 0)
 {
 if (argv[1] != NULL)
@@ -27,16 +31,14 @@ exit(0);
 }
 else if (exit_int == -1)
 {
-fprintf(stderr, "%s: %s: numeric argument required \n",
-argv[0], argv[1]);
+perror("numeric argument required");
 return;
 }
 else
 {
-exit(0);
+exit(exit_int);
 }
 }
 exit(0);
-}
 }
 }

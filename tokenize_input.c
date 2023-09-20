@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * _tokenize - Splits a string into an array of tokens.
- * @line: The input string to tokenize.
- * @delimiters: A string containing delimiters to split the input line.
- *
- * Return: An array of strings with the tokens, or NULL on failure.
- */
+* _tokenize - Splits a string into an array of tokens.
+* @line: The input string to tokenize.
+* @delimiters: A string containing delimiters to split the input line.
+*
+* Return: An array of strings with the tokens, or NULL on failure.
+*/
 char **_tokenize(char *line, char *delimiters)
 {
 char *token, *line_copy;
@@ -37,8 +37,7 @@ for (i = 0; token != NULL; i++)
 {
 tokenized_args[i] = malloc(_strlen(token) + 1);
 if (tokenized_args[i] == NULL)
-{
-exit(0); }
+{exit(0); }
 _strcopy(tokenized_args[i], token);
 token = strtok(NULL, delimiters);
 }

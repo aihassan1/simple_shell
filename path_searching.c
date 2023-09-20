@@ -32,9 +32,8 @@ free(path_cpy);
 return (NULL);
 }
 
-strcpy(_cmd_path, dir_with_cmd);
-strcat(_cmd_path, "/");
-strcat(_cmd_path, _cmd);
+_cmd_path = str_concat(dir_with_cmd, "/");
+_cmd_path = str_concat(_cmd_path, _cmd);
 
 if ((access(_cmd_path, X_OK)) == 0)
 {

@@ -21,6 +21,7 @@ void check_for_exit(char *argv[]);
 int string_to_int (char *str);
 char *path_searching(char *_cmd);
 
+int _printf(const char *format, ...);
 
 
 #endif

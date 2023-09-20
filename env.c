@@ -26,7 +26,7 @@ if (compare == 0)
 
 while (env[i] != NULL)
 {
-printf("%s\n", env[i]);
+_printf("%s\n", env[i]);
 i++;
 }
 }

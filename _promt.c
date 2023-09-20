@@ -12,7 +12,7 @@ while (1)
 {
 if (isatty(STDIN_FILENO))
 {
-printf("#cisfun ");
+_printf("#cisfun ");
 return (1);
 }
 return (0);

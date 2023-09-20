@@ -40,8 +40,7 @@ free(tokens[i]);
 }
 free(tokens);
 }
-free(line);
 }
-
+free(line);
 return (0);
 }

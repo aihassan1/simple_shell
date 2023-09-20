@@ -45,33 +45,33 @@ else if (format[i + 1] == 's')
 	/* Handle %s specifier */
 	string = va_arg(args, char *);
 
-	if (string == NULL)
-	  {
-	  /* Handle NULL string */
-	  write(1, "(null)", strlen("(null)"));
-	  i += 1;
-	  chars_printed_counter += strlen("(null)");
-	}
-	else
-	  {
-	  write(1, string, strlen(string));
-	  i += 1;
-	  chars_printed_counter += strlen(string);
-	}
+if (string == NULL)
+{
+/* Handle NULL string */
+write(1, "(null)", strlen("(null)"));
+i += 1;
+chars_printed_counter += strlen("(null)");
+}
+else
+{
+write(1, string, strlen(string));
+i += 1;
+chars_printed_counter += strlen(string);
+}
 }
 
 else if (format[i + 1] == '%')
-	{
-	/* Handle %% specifier */
-	write(1, "%", sizeof(char));
-	i += 1;
-	chars_printed_counter++;
+{
+/* Handle %% specifier */
+write(1, "%", sizeof(char));
+i += 1;
+chars_printed_counter++;
 }
 /* Handle % char only*/
 else if (format[i + 1] == '\0')
-	{
-	  return (-1);
-	}
+{
+return (-1);
+}
 
 /* Handle %d, %i specifiers */
 else if (format[i + 1] == 'd' || format[i + 1] == 'i')
@@ -113,7 +113,17 @@ return (-1);
 
 return (chars_printed_counter);
 }
-
+/**
+ * _int_to_string - Converts an integer to a string.
+ * @n: The integer to convert.
+ * @string: A pointer to the destination string buffer.
+ * @size: The size of the destination buffer.
+ *
+ * Description: This function takes an integer 'n'
+ * and converts it into a string
+ *
+ * Return: 0 on success, -1 on buffer size insufficiency.
+ */
 int _int_to_string(int n, char *string, size_t size)
 {
 char *start_ptr;

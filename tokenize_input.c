@@ -13,13 +13,11 @@ int i, token_counter = 0;
 char **tokenized_args;
 if (line == NULL)
 {
-fprintf(stderr, "Error: Input line is empty\n");
-exit(1);
+exit(0);
 }
 line_copy = malloc(strlen(line) + 1);
 if (line_copy == NULL)
 {
-perror("malloc line failed");
 return (NULL);
 }
 strcpy(line_copy, line);
@@ -32,15 +30,15 @@ token = strtok(NULL, delimiters);
 token_counter++;
 tokenized_args = malloc(token_counter *sizeof(char *));
 if (tokenized_args == NULL)
-{perror("malloc tokenized_args failed");
-exit(1); }
+{
+exit(0); }
 token = strtok(line, delimiters);
 for (i = 0; token != NULL; i++)
 {
 tokenized_args[i] = malloc(strlen(token) + 1);
 if (tokenized_args[i] == NULL)
-{perror("malloc tokenized_args failed");
-exit(1); }
+{
+exit(0); }
 strcpy(tokenized_args[i], token);
 token = strtok(NULL, delimiters);
 }

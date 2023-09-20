@@ -23,8 +23,7 @@ int status;
 char *command;
 if (args == NULL)
 {
-perror("Null tokens");
-return (-1);
+return (0);
 }
 pid = fork();
 if (pid == 0)
@@ -34,13 +33,11 @@ if (command != NULL)
 {
 execve(command, args, env);
 free(command);
-perror("execve failed");
-exit(EXIT_FAILURE);
+exit(0);
 }
 else
 {
-perror("command not found");
-exit(EXIT_FAILURE);
+exit(0);
 }}
 else if (pid > 0)
 {
@@ -48,13 +45,11 @@ do {
 wpid = waitpid(pid, &status, WUNTRACED);
 if (wpid == -1)
 {
-perror("waitpid failed for the parent");
-return (-2);
+return (0);
 }} while (!WIFSIGNALED(status) && !WIFEXITED(status));
 return (WEXITSTATUS(status));
 }
 else
 {
-perror("fork failed");
-return (-1);
+return (0);
 }}

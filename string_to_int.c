@@ -24,11 +24,11 @@ while (str[i] != '\0')
 if (str[i] >= '0' && str[i] <= '9')
 {
 output_int = output_int * 10 + (str[i] - '0');
-	  i++;
-	}
+i++;
+}
 else
 {
-return (-1);
+return (0);
 }
 }
 

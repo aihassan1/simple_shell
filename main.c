@@ -23,7 +23,7 @@ line = _read_input(_prompt());
 
 if (line == NULL)
 {
-exit(1);
+exit(0);
 }
 
 tokens = _tokenize(line, " \n");

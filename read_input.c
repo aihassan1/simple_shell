@@ -22,8 +22,7 @@ return (NULL);
 }
 else
 {
-perror("read error");
-exit(1);
+exit(0);
 }
 }
 line[strcspn(line, "\n")] = '\0';
@@ -33,8 +32,7 @@ else if (issaty == 1)
 {
 if (getline(&line, &line_size, stdin) == -1 || line == NULL)
 {
-perror("getline error");
-exit(1);
+exit(0);
 }
 else
 {

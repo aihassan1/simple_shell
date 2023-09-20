@@ -14,6 +14,8 @@ char *path_cpy;
 char *_cmd_path;
 char *dir_with_cmd;
 
+if ((access(_cmd, X_OK)) == 0)
+{return (_cmd); }
 if (_cmd == NULL)
 {
 return (NULL);

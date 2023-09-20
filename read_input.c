@@ -17,16 +17,6 @@ if (issaty == 0)
 if (getline(&line, &line_size, stdin) == -1)
 {
 return (NULL);
-/**
-if (feof(stdin))
-{
-return (NULL);
-}
-else
-{
-exit(0);
-}
-*/
 }
 line[_stringspan(line, "\n")] = '\0';
 }

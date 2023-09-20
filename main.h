@@ -1,7 +1,7 @@
 #ifndef ____MAIN_SHELL___H
 #define ____MAIN_SHELL___H
 
-#define BUFFER_SIZE 100000
+#define BUFFER_SIZE 4024
 #include <dirent.h>
 #include <fcntl.h>
 #include <signal.h>
@@ -23,6 +23,6 @@ char *path_searching(char *_cmd);
 
 int _printf(const char *format, ...);
 char *str_concat(char *s1, char *s2);
-  
+
 
 #endif

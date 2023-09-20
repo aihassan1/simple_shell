@@ -15,7 +15,7 @@ int exit_int;
 
 if (argv[0] != NULL)
 {
-compare = strcmp("exit", argv[0]);
+compare = _strcomp("exit", argv[0]);
 if (compare == 0)
 {
 if (argv[1] != NULL)

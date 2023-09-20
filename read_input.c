@@ -25,7 +25,7 @@ else
 exit(0);
 }
 }
-line[strcspn(line, "\n")] = '\0';
+line[_stringspan(line, "\n")] = '\0';
 }
 
 else if (issaty == 1)
@@ -36,7 +36,7 @@ exit(0);
 }
 else
 {
-line[strcspn(line, "\n")] = '\0';
+line[_stringspan(line, "\n")] = '\0';
 }
 }
 return (line);

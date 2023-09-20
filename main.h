@@ -23,6 +23,10 @@ char *path_searching(char *_cmd);
 
 int _printf(const char *format, ...);
 char *str_concat(char *s1, char *s2);
-
+char *_strduplicate(char *str);
+int _strlen(char *str);
+char *_strcopy(char *_dest, const char *_source);
+int _strcomp(char *s1, char *s2);
+size_t _stringspan(const char *string, const char *stop_string);
 
 #endif

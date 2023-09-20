@@ -15,12 +15,12 @@ if (line == NULL)
 {
 exit(0);
 }
-line_copy = malloc(strlen(line) + 1);
+line_copy = malloc(_strlen(line) + 1);
 if (line_copy == NULL)
 {
 return (NULL);
 }
-strcpy(line_copy, line);
+_strcopy(line_copy, line);
 token = strtok(line_copy, delimiters);
 while (token != NULL)
 {
@@ -35,11 +35,11 @@ exit(0); }
 token = strtok(line, delimiters);
 for (i = 0; token != NULL; i++)
 {
-tokenized_args[i] = malloc(strlen(token) + 1);
+tokenized_args[i] = malloc(_strlen(token) + 1);
 if (tokenized_args[i] == NULL)
 {
 exit(0); }
-strcpy(tokenized_args[i], token);
+_strcopy(tokenized_args[i], token);
 token = strtok(NULL, delimiters);
 }
 tokenized_args[token_counter - 1] = NULL;

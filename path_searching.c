@@ -20,7 +20,7 @@ if (_cmd == NULL)
 {
 return (NULL);
 }
-path_cpy = strdup(current_path);
+path_cpy = _strduplicate(current_path);
 dir_with_cmd = strtok(path_cpy, ":");
 
 while (dir_with_cmd != NULL)

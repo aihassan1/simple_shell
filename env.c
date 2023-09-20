@@ -8,7 +8,7 @@
  * Description:
  *  function checks if the command is "env" and prints all the environment
  *  variables if it matches.|
- *  It uses strcmp to compare the command with "env"
+ *  It uses _strcomp to compare the command with "env"
  *  and iterates through the environment variables and print them.
  *
  * Return: void.
@@ -20,7 +20,7 @@ int i = 0;
 
 if (args[0] != NULL)
 {
-compare = strcmp("env", args[0]);
+compare = _strcomp("env", args[0]);
 if (compare == 0)
 {
 

@@ -1,8 +1,6 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <string.h>
-#include <unistd.h>
+#include "main.h"
 #include <limits.h>
+#include <stdarg.h>
 
 int _int_to_string(int n, char *string, size_t size);
 /**
@@ -23,7 +21,7 @@ va_start(args, format);
 /* Handle case where format string is NULL */
 if (format == NULL)
 {
-write(1, "(null)", strlen("(null)"));
+write(1, "(null)", _strlen("(null)"));
 return (-1);
 }
 
@@ -48,15 +46,15 @@ else if (format[i + 1] == 's')
 if (string == NULL)
 {
 /* Handle NULL string */
-write(1, "(null)", strlen("(null)"));
+write(1, "(null)", _strlen("(null)"));
 i += 1;
-chars_printed_counter += strlen("(null)");
+chars_printed_counter += _strlen("(null)");
 }
 else
 {
-write(1, string, strlen(string));
+write(1, string, _strlen(string));
 i += 1;
-chars_printed_counter += strlen(string);
+chars_printed_counter += _strlen(string);
 }
 }
 
@@ -78,9 +76,9 @@ else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 	{
 	number = va_arg(args, int);
 	_int_to_string(number, buf, sizeof(buf));
-	write(1, buf, strlen(buf));
+	write(1, buf, _strlen(buf));
 	i += 1;
-	chars_printed_counter += strlen(buf);
+	chars_printed_counter += _strlen(buf);
 }
 
 

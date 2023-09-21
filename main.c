@@ -29,7 +29,7 @@ tokens = _tokenize(line, " \n");
 if (tokens == NULL)
 {
 free(line);
-exit (1);
+exit(1);
 }
 free(line);
 

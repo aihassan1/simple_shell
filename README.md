@@ -3,6 +3,7 @@ this is a readme file
 
 A simple shell implementation in C.
 
+
 ## Description
 
 This shell is a basic command-line interpreter that allows users to execute commands and interact with the operating system. It supports features such as command execution, environment variable handling, and basic error handling.

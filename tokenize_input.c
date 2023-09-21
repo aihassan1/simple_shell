@@ -13,7 +13,7 @@ int i, token_counter = 0;
 char **tokenized_args;
 if (line == NULL)
 {
-exit(0);
+return (NULL);
 }
 line_copy = malloc(_strlen(line) + 1);
 if (line_copy == NULL)
@@ -31,13 +31,13 @@ token_counter++;
 tokenized_args = malloc(token_counter *sizeof(char *));
 if (tokenized_args == NULL)
 {
-exit(0); }
+return (NULL); }
 token = strtok(line, delimiters);
 for (i = 0; token != NULL; i++)
 {
 tokenized_args[i] = malloc(_strlen(token) + 1);
 if (tokenized_args[i] == NULL)
-	{exit(0); }
+{return (NULL); }
 _strcopy(tokenized_args[i], token);
 token = strtok(NULL, delimiters);
 }

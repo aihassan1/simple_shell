@@ -17,13 +17,17 @@ void _execute(char **args, char **env)
 {
 pid_t pid;
 char *command;
-
 if (args == NULL || args[0] == NULL || env == NULL)
 {
 return;
 }
 
 pid = fork();
+if (pid < 0)
+{
+perror("fork failed");
+exit(0);
+}
 if (pid == 0)
 {
 command = path_searching(args[0]);
@@ -45,6 +49,5 @@ else if (pid > 0)
 int status;
 waitpid(pid, &status, 0);
 }
-
 return;
 }

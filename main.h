@@ -28,5 +28,5 @@ int _strlen(char *str);
 char *_strcopy(char *_dest, const char *_source);
 int _strcomp(char *s1, char *s2);
 size_t _stringspan(const char *string, const char *stop_string);
-
+void free_tokens(char **tokens);
 #endif

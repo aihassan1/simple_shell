@@ -12,7 +12,6 @@ int main(int argc, char *argv[], char *env[])
 {
 char *line = NULL;
 char **tokens = NULL;
-int i;
 
 (void)argc;
 (void)argv;
@@ -27,16 +26,20 @@ exit(0);
 }
 
 tokens = _tokenize(line, " \n");
+if (tokens == NULL)
+{
+free(line);
+exit (1);
+}
+free(line);
 
 check_for_exit(tokens);
 _execute(tokens, env);
-free(line);
-for (i = 0; tokens[i] != NULL; i++)
+
+if (tokens != NULL)
 {
-free(tokens[i]);
+free_tokens(tokens);
 }
-free(tokens);
-}
-free(line);
 return (0);
+}
 }

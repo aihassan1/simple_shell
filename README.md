@@ -1,7 +1,6 @@
 this is a readme file
 # 0x16. C - Simple Shell
 
-
 A simple shell implementation in C.
 
 ## Description

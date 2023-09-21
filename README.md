@@ -11,14 +11,12 @@ This shell is a basic command-line interpreter that allows users to execute comm
 ## Features
 
 - Command execution: The shell can execute commands entered by the user.
+
 - Environment variable handling: The shell can access and display environment variables.
+
 - Error handling: The shell provides basic error handling for command execution and input parsing.
 
 ## Getting Started
-
-### Prerequisites
-
-- C compiler (e.g., GCC)
 
 
 ## Usage
